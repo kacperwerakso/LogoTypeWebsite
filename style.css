@@ -1,0 +1,787 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.body {
+    background-color: black; /*#19191d;*/
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased
+}
+
+.cookie {
+    position:fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    z-index: 999;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    font-size: 10px;
+}
+
+.cookieTitle {
+    display: inline;
+}
+
+.cookieAccept {
+    margin-left: 10px;
+    border: 1px black solid;
+    padding: 3px;
+    background-color: rgb(11, 132, 132);
+}
+
+.cookieAccept:hover {
+    cursor: pointer;
+}
+
+
+.header {
+    text-align: center;
+
+}
+
+.parallaxContainer {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.parallaxImage {
+    background-image: url('./images/backgroundMain.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+}
+
+.parallaxContent {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    white-space: nowrap;
+}
+
+.mainTitle {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    margin: 20px;
+    font-weight: 200;
+    font-size: large;
+    text-decoration: none;
+}
+
+.mainTitle:hover {
+    cursor: pointer;
+    color: rgb(220, 217, 217);
+}
+
+.logoType {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 280px;
+    font-size: 30px;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.logoTypeText {
+    font-weight: 100;
+    font-size: 20px;
+    opacity: 1;
+}
+
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: rotateY(180deg);
+    animation: revealText 0.5s ease-in-out forwards;
+}
+
+@keyframes revealLetter {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.main {
+    margin-top: 100px;
+}
+
+.aboutUs {
+    padding: 100px;
+}
+
+.aboutUsTitle {
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    font-size: 40px;
+    white-space: nowrap;
+}
+
+.aboutUsText {
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 2;
+    padding: 100px;
+    margin-top: -50px;
+}
+
+.logo {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+}
+
+
+.howItWorks {
+    display: grid;
+    padding: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-image: url('./images/backgroundDark.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.howItWorksTitle {
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    font-size: 40px;
+    white-space: nowrap;
+    margin-bottom: 100px;
+}
+
+.nums {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.howItWorksText1 {
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 2;
+    text-align: right;
+}
+.howItWorksText2 {
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 2
+
+}
+
+.fa-right-long {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    font-size: 50px;
+}
+
+#arrow2 {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.showPricing {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.showPricingBtn {
+    border: 1px black solid;
+    padding: 15px;
+    background-color: whitesmoke;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    font-weight: 100;
+}
+
+.showPricingBtn:hover {
+    cursor: pointer;
+    background-color: rgb(229, 226, 226);
+}
+
+.sampleAll {
+    text-align: center;
+}
+
+.samplesTitle {
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    font-size: 40px;
+    white-space: nowrap;
+    margin-bottom: 100px;
+    margin-top: 210px;
+}
+
+.samples {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 150px;
+    grid-gap: 8%;
+    margin-top: -130px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.sample {
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.slideIn {
+    opacity: 1;
+}
+
+.pricing {
+    background-color: rgb(0, 0, 0);
+    padding: 150px;
+    margin-top: 10%;
+    background-image: url('./images/backgroundStars.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.contact {
+    background-image: url('./images/backgroundMountain.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contactUsContainer {
+    text-align: center;
+
+}
+
+.contactFormTitle {
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    font-size: 40px;
+    white-space: nowrap;
+    margin-bottom: 100px;
+}
+
+
+
+.contactUser {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+.contactMail {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+
+.inputUser {
+    text-align: center;
+    width: 25%;
+    max-width: 500px;
+    padding: 5px;
+    margin-bottom: 2%;
+    font-size: large;
+    font-weight: 200;
+    min-width: 200px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased
+}
+
+.inputUser:focus {
+    outline: none;
+}
+
+.contactContent {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+
+.inputContent {
+    width: 25%;
+    max-width: 500px;
+    font-weight: 200;
+    font-size: large;
+    padding: 10px 10px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-width: 200px; 
+}
+
+.inputContent:focus {
+    outline: none;
+}
+
+.btnSend {
+    border: 1px black solid;
+    padding: 12px 20px;
+    background-color: whitesmoke;
+    margin-top: 30px;
+    font-weight: 100;
+    color: black;
+    text-decoration: none;
+    outline: none;
+}
+
+.btnSend:hover {
+    cursor: pointer;
+    background-color: rgb(229, 226, 226);
+}
+
+.footer {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 80%;
+    color: white;
+    bottom: 0;
+    margin-top: 100px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.footerRole {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.copyright {
+    color: white;
+    white-space: nowrap;
+}
+
+.roleAll {
+    padding: 100px;
+}
+
+.termsConditions {
+    color: white;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.termsConditions:hover {
+    cursor: pointer;
+    color: rgb(229, 226, 226);
+}
+
+.privatePolicy {
+    color: white;
+    white-space: nowrap;
+}
+
+.privatePolicy:hover {
+    cursor: pointer;
+    color: rgb(229, 226, 226);
+}
+
+.roleBody {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', 'sans-serif';
+    -webkit-font-smoothing: antialiased
+    
+}
+
+.roleMain {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.roleTitle {
+    color: black;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.roleText {
+    color: black;
+    font-weight: 100;
+}
+
+.roleDate {
+    color: black;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.fa-solid {
+    font-size: 50px;
+    margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+    
+    .parallaxImage {
+        height: 100vh;
+    }
+    
+    .parallaxContent {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+        grid-gap: 20px;
+    }
+
+    .aboutUs {
+        padding: 0;
+        display: block;
+        margin-bottom: 100px;
+    }
+
+    .aboutUsText {
+        padding: 50px;
+        display: block;
+    }
+
+    .howItWorks {
+        display: block;
+        padding: 50px;
+    }
+
+    .howItWorksText1 {
+        text-align: start;
+        margin-top: -50px;
+    }
+
+    .fa-right-long {
+        rotate: 90deg;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .showPricing {
+        margin-top: 30%;
+    }
+
+    .samplesAll {
+        margin-top: -100px;
+        margin-bottom: 150px;
+        text-align: center;
+    }
+
+    .samples {
+        padding: 80px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .pricing {
+        display: block;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+
+    .aboutUsTitle {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .contactFormTitle {
+        margin-top: -80px;
+    }
+
+    .contactUsContainer {
+        margin-top: -50px;
+    }
+
+    .inputUser {
+        width: 60%;
+        margin-bottom: 20px;
+        max-width: 300px;
+    }
+
+    .inputContent {
+        width: 60%;
+        max-width: 300px;
+    }
+
+    .copyright {
+        margin-bottom: 5px;
+    }
+
+    .roleAll {
+        padding: 40px;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+
+    .footerRole {
+        grid-template-columns: 1fr;
+    }
+
+   
+}
+
+
+@media (min-width: 701px) and (max-width: 1200px) {
+    
+    .parallaxContent {
+        margin-top: -30px;
+    }
+
+    .logoType {
+        margin-top: -50px;
+    }
+    
+
+    .aboutUs {
+        padding: 0;
+        display: block;
+        margin-bottom: 200px;
+        margin-top: 100px;
+    }
+
+    .aboutUsText {
+        padding: 100px;
+        display: block;
+    }
+
+    .howItWorks {
+        display: block;
+        padding: 50px;
+    }
+
+    .howItWorksText1 {
+        text-align: start;
+        margin-top: -50px;
+        padding: 50px;
+    }
+
+    .howItWorksText2 {
+        text-align: start;
+        padding: 50px;
+    }
+
+    .showPricing {
+        margin-top: 70px
+    }
+
+    .samplesAll {
+        margin-top: -100px;
+        margin-bottom: 150px;
+        text-align: center;
+    }
+
+    .samples {
+        padding: 80px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-left: 25px;
+    }
+
+    .sample {
+        width: 80%;
+        
+    }
+
+    .pricing {
+        display: block;
+        padding: 50px; 
+    }
+
+    .pricingText {
+        font-size: 20px;
+    }
+
+    .contactFormTitle {
+        margin-top: -60px;
+    }
+
+    .contactUsContainer {
+        margin-top: -30px;
+    }
+
+    .inputUser {
+        width: 40%;
+        margin-bottom: 20px;
+        max-width: 400px;
+    }
+
+    .inputContent {
+        width: 40%;
+        max-width: 400px;
+    }
+
+}
+
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+    .mainTitle {
+        font-size: 20px;
+    }
+
+    .parallaxContent {
+        top: 12%
+    }
+
+    .logoType {
+        margin-top: -50px;
+    }
+
+    .logo {
+        margin-top: -50px;
+        width: 130px;
+    }
+
+    .aboutUsTitle {
+        font-size: 50px;
+    }
+
+
+    .howItWorksTitle {
+        font-size: 50px;
+    }
+
+    .howItWorksText1 {
+        font-size: 16px;
+    }
+
+    .howItWorksText2 {
+        font-size: 16px;
+    }
+
+    .samplesTitle {
+        font-size: 50px
+    }
+
+    .samples {
+        margin-left: 25px;
+    }
+
+    .sample {
+        width: 80%;
+    }
+
+}
+
+@media (min-width: 1601px) {
+    .mainTitle {
+        font-size: 21px;
+    }
+
+    .parallaxContent {
+        top: 12%
+    }
+
+    .logoType {
+        font-size: 30px;
+    }
+
+    .logo {
+        width: 150px;
+        margin-top: -50px;
+    }
+
+    .aboutUs {
+        padding: 100px;
+    }
+
+    .aboutUsTitle {
+        font-size: 50px;
+        margin-bottom: -100px;
+        
+    }
+
+    .aboutUsText {
+        font-size: 18px;
+        padding: 200px;
+    }
+
+    .howItWorks {
+        padding: 230px;
+    }
+
+    .howItWorksTitle {
+        font-size: 50px;
+    }
+
+    .howItWorksText1 {
+        font-size: 18px;
+    }
+
+    .howItWorksText2 {
+        font-size: 18px;
+    }
+
+    .samples {
+        padding: 200px;
+        text-align: center;
+    }
+
+    .samplesTitle {
+        font-size: 50px
+    }
+
+    .sample {
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .samples {
+        margin-left: 25px;
+    }
+
+    .footer {
+        margin-top: 200px;
+    }
+
+    
+
+}
